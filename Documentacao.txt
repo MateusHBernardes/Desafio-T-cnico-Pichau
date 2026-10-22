@@ -1,0 +1,35 @@
+Data e hora de início: 21/10/2005 às 21:15
+Data e hora do término: 
+
+Parte 1: Sobre você
+Respostas curtas (3 a 8 linhas cada), com as suas palavras. Não existe resposta certa, queremos exemplos reais e concretos, com nomes de telas, setores, situações.
+
+1.1 Descreva, passo a passo, uma tarefa do seu dia a dia na Pichau que você acha lenta, repetitiva ou que costuma gerar erro. Quais sistemas/telas você usa nela? Se você pudesse mudar o sistema, o que mudaria?
+
+Resposta: Atualmente uma tarefa que se enquadra perfeitamente nessa questão é o processo de requisições, como funciona: 
+
+O analista chega em um consenso com o cliente da melhor forma de resolver o caso;
+Analista abre as informações do cliente;
+Analista preenche o formulário de requisições;
+Gero a requisição direto na planilha com appscript;
+Consulto o preço dos itens;
+Anexo a requisição ajustada no email;
+Encaminho a requisição no grupo de requisições, aguardamos pela liberação ou ajuste da liderança/supervisão/gerência;
+Anexo o print com a aprovação no ticket do analista em anotação;
+Após toda essas etapas podemos seguir com o operacional interno utilizando o ERP.
+
+O processo está descentralizado(no mínimo 6 guias diferentes) e abre margem para diversos erros, como o analista informar os dados do cliente errado, preencher o valor do item erroneamente, superiores passarem pela req, req não ter retorno, etc, dependendo o caso, só damos continuidade quando o cliente cobra o analista meses depois.
+
+A ideia de solução é a centralização das principais partes, resultando em melhoria do fluxo, eficácia e redução de erros.
+
+Criaria uma função para o próprio analista criar a requisição, selecionando o cliente, itens e do que se trata(RMA, reembolso, extravio, etc.), essa requisição ficaria na pagina, onde a gerência pode aprovar, recusar ou escrever anotação, e dependendo do tipo, após a aprovação o próprio sistema iria criar a nota fiscal, remessa, etc.
+
+1.2 Conte o último problema que você resolveu sozinho(a) (técnico ou não). Como você descobriu a causa?
+
+Resposta: Realizamos o relatório mensal na primeira semana, antes o líder alocava de duas a très pessoas para analizar cada linha da planilha manualmente, abrir o respectivo ticket e consultar a planilha do mês anterior para realizar o relatório, esse processo durava em média 2 dias. Desenvolvi um appscript que gera o relatório com 1 clique, o código analisa linha por linha de ambas as planilhas e entrega tudo com dashboards.
+
+
+
+1.3 Qual foi o último código que você escreveu antes deste desafio (faculdade, curso, projeto pessoal)? O que ele fazia? Se estiver no GitHub, mande o link.
+
+Resposta: O último código que desenvolvi gera uma requisição com base nas informações preenchidas no formulário.
