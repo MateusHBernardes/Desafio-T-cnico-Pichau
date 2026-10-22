@@ -25,15 +25,47 @@ public class Exercicio_2 {
         listaPedido.add(new Devolucao("Arrependimento", 59.90, 1005));
         listaPedido.add(new Devolucao("Defeito", 189.90, 1006));
         listaPedido.add(new Devolucao("Avaria no transporte", 1299.00, 1007));
+        
+        double totalArrependimento = 0;
+        double totalAvaria = 0;
+        double totalDefeito = 0;
+
+        int devAcima500 = 0;
+        
+        double maiorTotal = totalArrependimento;
+        String motivoMaior = "Arrependimento";
+        
+        for (Devolucao devolucao : listaPedido) {
+            
+            
+            if (devolucao.motivo.equals("Arrependimento")) {
+                totalArrependimento += devolucao.valor;
+            } else if (devolucao.motivo.equals("Avaria no transporte")) {
+                totalAvaria += devolucao.valor;
+            } else if (devolucao.motivo.equals("Defeito")) {
+                totalDefeito += devolucao.valor;
+            }
+
+
+            if (totalAvaria > maiorTotal) {
+                maiorTotal = totalAvaria;
+                motivoMaior = "Avaria no transporte";
+            } else if (totalDefeito > maiorTotal) {
+                maiorTotal = totalDefeito;
+                motivoMaior = "Defeito";
+            }
+
+            if (devolucao.valor >= 500) {
+                devAcima500++;
+            }
+            
+        }
+            System.out.println("Total de devoluções por motivo:");
+            System.out.println("Arrependimento: R$" + totalArrependimento);
+            System.out.println("Avaria no transporte: R$" + totalAvaria);
+            System.out.println("Defeito: R$" + totalDefeito);
+            System.out.println("Motivo com maior valor de devolução: " + motivoMaior);
+            System.out.println("Número de devoluções acima de R$500: " + devAcima500);
     }
 
-// //     devolucoes = [
-// { pedido: 1001, motivo: "Defeito", valor: 899.90 },
-// { pedido: 1002, motivo: "Arrependimento", valor: 129.90 },
-// { pedido: 1003, motivo: "Defeito", valor: 2499.00 },
-// { pedido: 1004, motivo: "Avaria no transporte", valor: 349.90 },
-// { pedido: 1005, motivo: "Arrependimento", valor: 59.90 },
-// { pedido: 1006, motivo: "Defeito", valor: 189.90 },
-// { pedido: 1007, motivo: "Avaria no transporte", valor: 1299.00 },
-// // ]
 }
