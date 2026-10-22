@@ -1,6 +1,3 @@
-Data e hora de início: 21/10/2005 às 21:15
-Data e hora do término: 
-
 Parte 1: Sobre você
 Respostas curtas (3 a 8 linhas cada), com as suas palavras. Não existe resposta certa, queremos exemplos reais e concretos, com nomes de telas, setores, situações.
 
@@ -33,3 +30,68 @@ Resposta: Realizamos o relatório mensal na primeira semana, antes o líder aloc
 1.3 Qual foi o último código que você escreveu antes deste desafio (faculdade, curso, projeto pessoal)? O que ele fazia? Se estiver no GitHub, mande o link.
 
 Resposta: O último código que desenvolvi gera uma requisição com base nas informações preenchidas no formulário.
+
+Parte 3: Leitura de código
+
+Exercício 3
+A função abaixo deveria contar quantos pedidos existem em cada situação. Responda sem rodar o código primeiro:
+
+
+
+a) O que ela retorna para a chamada do exemplo?
+Resposta: Retorno nulo ()
+
+b) Quais são os problemas? Explique com as suas palavras.
+Resposta: O código não está armazenando a soma. Esse resumo[s] + 1; ta calculando 0+1 que é 1.
+
+
+c) Escreva a versão corrigida. (Depois disso, pode rodar para conferir.)
+Resposta: Para corrigir teria que mudar o i = 1 para i =  0, esse é o padrão dos arrays, teria também que mudar resumo[s] + 1 para resumo[s] = resumo[s] + 1, dessa forma ele armazena as alterações.
+
+
+
+
+Exercício 4: SQL
+
+CLIENTES (ID, NOME)
+PEDIDOS (ID, ID_CLIENTE, DATA, SITUACAO)
+ITENS_PEDIDO (ID, ID_PEDIDO, SKU, QTD, VALOR_UNIT)
+
+a) Escreva uma consulta que liste nome do cliente, ID do pedido e valor total do pedido (soma de QTD × VALOR_UNIT) apenas dos pedidos com SITUACAO = 'Faturado'.
+
+Resposta: Seria um select no nome e pedido do cliente;
+Fazer o cálculo de quantidade vezes o valor unitário;
+Juntas as tabelas pedidos e clientes e outro de itens no pedido;
+Filtrar a situação da tabela para faturado;
+
+b) Escreva uma consulta que liste os pedidos que não têm nenhum item.
+
+Resposta: Teria que filtrar por NULL por itens que estejam nos pedidos, pesquisando achei essa consulta:
+LEFT JOIN ITENS_PEDIDO I ON P.ID = I.ID_PEDIDO
+WHERE I.ID_PEDIDO IS NULL;
+
+
+https://dev.mysql.com/doc/refman/8.0/en/join.html
+
+Parte 4: Fechamento
+
+Copie e responda no seu arquivo de respostas:
+
+4.1 Quanto tempo, aproximadamente, você levou?
+Data e hora de início: 21/10/2026 às 21:15
+Data e hora do término: 22/10/2026 às 01:58
+
+4.2 Qual exercício foi mais difícil? Onde você travou?
+Tive mais dificuldades no exercício do bipador, precisei relembrar do Java.
+4.3 Que sites/materiais você consultou?
+
+https://dev.mysql.com/doc/refman/8.0/en/aggregate-functions.html
+https://www.w3schools.com/js/js_object_intro.asp
+https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Guide/Loops_and_iteration
+https://www.w3schools.com/JAVA/java_arraylist.asp
+https://docs.oracle.com/en/java/
+
+
+
+4.4 Declaro que NÃO usei ferramentas de IA neste desafio: (X) Concordo
+Nome: Mateus Henrique Bernardes
